@@ -156,8 +156,69 @@
 
 @media (min-width: 901px) {
   nav {
-    width: 100vw;
-    background: red;
+    position: fixed;
+    width: 100%;
+    padding: 0.5rem;
+    background: grey;
+  }
+  nav #navContainer {
+    height: 100%;
+    width: 100%;
+    background: #999999;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav #navContainer #toggler {
+    display: none;
+  }
+  nav #navContainer #hamburger {
+    display: none;
+  }
+  nav #navContainer #logo {
+    font-size: 1.5rem;
+  }
+  nav #navContainer #navItemsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0 auto;
+  }
+  nav #navContainer #navItemsContainer > div > div {
+    height: 100%;
+  }
+  nav #navContainer #navItemsContainer > div > div > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+  }
+  nav #navContainer #navItemsContainer > div > div > ul > li {
+    font-size: 1.5rem;
+    padding: 0 0.4rem;
+  }
+  nav #navContainer #navItemsContainer > div > div > ul > li > a {
+    text-decoration: none;
+  }
+  body {
+    height: 200vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
