@@ -159,8 +159,9 @@
         margin: 0 0.3rem;
         transition: all 0.2s ease;
       }
+
       #navItemsContainer > div > div > ul > li:hover {
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: $secondaryTextColor;
       }
       #navItemsContainer > div > div > ul > li > a {
@@ -169,6 +170,20 @@
         text-decoration: none;
       }
       #navItemsContainer > div > div > ul > li > a:hover {
+        color: #fff;
+      }
+      #navItemsContainer > div > div > ul > #bookNowNavItem {
+        border-radius: 3px;
+        background-color: $secondaryTextColor;
+      }
+      #navItemsContainer > div > div > ul > #bookNowNavItem:hover {
+        border-radius: 3px;
+        background-color: $secondaryTextColor;
+      }
+      #navItemsContainer > div > div > ul > #bookNowNavItem a {
+        color: #fff;
+      }
+      #navItemsContainer > div > div > ul > #bookNowNavItem a:hover {
         color: #fff;
       }
     }
