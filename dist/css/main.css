@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  nav {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    background-color: grey;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav #navContainer {
+    position: relative;
+    background-color: #b8b8b8;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav #navContainer #toggler {
+    position: absolute;
+    opacity: 0;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+  }
+  nav #navContainer #hamburger {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav #navContainer #hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: black;
+    z-index: 2;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  nav #navContainer #hamburger > div:before,
+  nav #navContainer #hamburger > div:after {
+    content: "";
+    z-index: inherit;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: -10px;
+    background: inherit;
+  }
+  nav #navContainer #hamburger > div:after {
+    top: 10px;
+  }
+  nav #navContainer #toggler:checked + #hamburger > div {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  nav #navContainer #toggler:checked + #hamburger > div:before,
+  nav #navContainer #toggler:checked + #hamburger > div:after {
+    top: 0px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  nav #navContainer #logo {
+    position: absolute;
+    right: 0;
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: none;
+  }
+  nav #navContainer #logo:hover {
+    cursor: pointer;
+  }
+  nav #navContainer #navItemsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav #navContainer #navItemsContainer > div {
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.589);
+    height: 150vw;
+    width: 150vw;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  nav #navContainer #navItemsContainer > div > div {
+    z-index: inherit;
+    max-height: 100vh;
+    max-width: 90vw;
+    text-align: center;
+  }
+  nav #navContainer #navItemsContainer > div > div > ul {
+    z-index: inherit;
+    list-style: none;
+  }
+  nav #navContainer #navItemsContainer > div > div > ul > a {
+    z-index: inherit;
+    text-decoration: none;
+  }
+  nav #navContainer #toggler:checked ~ #navItemsContainer > div {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 901px) {
+  nav {
+    width: 100vw;
+    background: red;
+  }
+}
+/*# sourceMappingURL=main.css.map */
