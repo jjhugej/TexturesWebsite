@@ -5,6 +5,7 @@
     position: fixed;
     padding: 10px;
     display: flex;
+    z-index: 4;
     #navContainer {
       position: relative;
       width: 100%;
@@ -22,29 +23,31 @@
       }
       #hamburger {
         position: absolute;
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0.5rem;
+        border: solid 1px $secondaryTextColor;
       }
       #hamburger > div {
         position: relative;
         width: 100%;
         height: 2px;
-        background: black;
-        z-index: 2;
+        background: $secondaryTextColor;
+        z-index: 3;
         transition: all 0.4s ease-in-out;
       }
       //draws the top and bottom hamburger lines
-      #hamburger > div:before,
-      #hamburger > div:after {
+      #hamburger > div::before,
+      #hamburger > div::after {
         content: "";
-        z-index: inherit;
         position: absolute;
-        height: 2px;
-        width: 100%;
+        z-index: inherit;
         top: -10px;
+        width: 100%;
+        height: 2px;
         background: inherit;
       }
       #hamburger > div:after {
@@ -64,13 +67,14 @@
         position: absolute;
         right: 0;
         font-size: 1.8rem;
-        color: black;
+        color: $accentTextColor;
         text-decoration: none;
       }
       #logo:hover {
         cursor: pointer;
       }
       #navItemsContainer {
+        z-index: 1;
         position: fixed;
         top: 0;
         left: 0;
@@ -81,8 +85,8 @@
         justify-content: center;
       }
       #navItemsContainer > div {
-        z-index: 98;
-        background: rgba(0, 0, 0, 0.589);
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.8);
         height: 150vw;
         width: 150vw;
         border-radius: 50%;
@@ -103,8 +107,11 @@
         z-index: inherit;
         list-style: none;
       }
-      #navItemsContainer > div > div > ul > a {
-        z-index: inherit;
+      #navItemsContainer > div > div > ul > li > a {
+        color: $accentTextColor;
+        font-size: 1.3rem;
+        padding: 0.8rem 0;
+        z-index: 99;
         text-decoration: none;
       }
       //once toggler is checked show ul>li
@@ -117,6 +124,7 @@
 }
 @media (min-width: 901px) {
   nav {
+    z-index: 1;
     position: fixed;
     width: 100%;
     padding: 1rem 2rem;
@@ -134,7 +142,9 @@
         display: none;
       }
       #logo {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+        font-family: $serifFontFamily;
+        font-weight: 600;
         color: $primaryTextColor;
         text-decoration: none;
       }
@@ -156,7 +166,6 @@
         display: flex;
         font-size: 1.5rem;
         padding: 0.3rem 0.6rem;
-        margin: 0 0.3rem;
         transition: all 0.2s ease;
       }
 
@@ -166,6 +175,7 @@
       }
       #navItemsContainer > div > div > ul > li > a {
         line-height: 3rem;
+        font-family: $sansFontFamily;
         color: $primaryTextColor;
         text-decoration: none;
       }

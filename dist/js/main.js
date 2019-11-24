@@ -2,9 +2,9 @@ $(document).ready(function() {
   $(function() {
     $(".navLiItem").hover(
       function() {
-        $("#bookNowNavItem").css("background-color", "white");
-        $("#bookNowNavItem a").css("color", "black");
-        $("#bookNowNavItem, a").css("transition", "all .5s ease");
+        $("#bookNowNavItem").css("background-color", "rgba(0, 0, 0, 0)");
+        $("#bookNowNavItem a").css("color", "white");
+        $("#bookNowNavItem, a").css("transition", "all .8s ease");
       },
       function() {
         // on mouseout, reset the background colour
